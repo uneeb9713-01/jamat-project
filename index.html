@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Public Message</title>
+
+   <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #222;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    width: 100%;
+    min-height: 75px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    gap: 15px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.10);
+}
+
+/* LOGO */
+
+.logo {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #306f88;
+    flex-shrink: 0;
+}
+
+/* WEBSITE NAME */
+
+.navbar h3 {
+    color: #306f88;
+    font-size: medium;
+    margin-left: auto;
+    margin-right: 30px;
+    text-align: center;
+}
+
+/* SIGN IN BUTTON */
+
+.signin-btn {
+    text-decoration: none;
+    background: linear-gradient(135deg, #306f88, #6bb8e9);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.3;
+    min-width: 115px;
+    display: inline-block;
+    transition: 0.3s;
+    flex-shrink: 0;
+}
+
+.signin-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(48, 111, 136, 0.3);
+}
+
+.signin-btn small {
+    display: block;
+    font-size: 10px;
+    font-weight: normal;
+    margin-top: 2px;
+    opacity: 0.9;
+}
+
+
+/* ================= PUBLIC MESSAGE ================= */
+
+.message-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto 25px;
+}
+
+.message-box {
+    background: white;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid #306f88;
+}
+
+.message-title {
+    font-size: 32px;
+    color: #306f88;
+    margin-bottom: 15px;
+}
+
+.message-text {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #555;
+    overflow-wrap: anywhere;
+}
+
+
+/* ================= CAROUSEL ================= */
+
+.carousel {
+    width: 90%;
+    max-width: 1100px;
+    height: 400px;
+    margin: 0 auto 35px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    animation: slide 12s infinite;
+}
+
+.slide {
+    width: 33.333333%;
+    height: 100%;
+    flex-shrink: 0;
+    min-width: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* CAROUSEL ANIMATION */
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    30% {
+        transform: translateX(0);
+    }
+
+    35% {
+        transform: translateX(-33.333333%);
+    }
+
+    65% {
+        transform: translateX(-33.333333%);
+    }
+
+    70% {
+        transform: translateX(-66.666667%);
+    }
+
+    95% {
+        transform: translateX(-66.666667%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* ================= MEMBERS ================= */
+
+.members-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto 60px;
+}
+
+.members-title {
+    text-align: center;
+    color: #306f88;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.member-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    min-width: 0;
+}
+
+.member-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+}
+
+.member-pic {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 25px;
+    border: 5px solid #6bb8e9;
+}
+
+.member-info {
+    padding: 20px 22px 25px;
+}
+
+.member-info h3 {
+    font-size: 21px;
+    color: #306f88;
+    margin-bottom: 7px;
+    overflow-wrap: anywhere;
+}
+
+.member-info h4 {
+    font-size: 15px;
+    color: #6bb8e9;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+.member-info p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #666;
+    overflow-wrap: anywhere;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    width: 100%;
+    background: linear-gradient(135deg, #306f88, #6bb8e9);
+    color: white;
+    padding: 40px 20px 25px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 12px;
+}
+
+.footer h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 15px;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+.footer-line {
+    width: 80%;
+    max-width: 700px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.4);
+    margin: 25px auto 18px;
+}
+
+.copyright {
+    font-size: 14px !important;
+    opacity: 0.85 !important;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 10px 22px;
+    }
+
+    .navbar h3 {
+        font-size: 18px;
+        margin-right: 15px;
+    }
+
+    .message-section,
+    .members-section,
+    .carousel {
+        width: 92%;
+    }
+
+    .message-box {
+        padding: 28px;
+    }
+
+    .message-title {
+        font-size: 28px;
+    }
+
+    .message-text {
+        font-size: 17px;
+    }
+
+    .carousel {
+        height: 320px;
+        margin-bottom: 30px;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .member-info {
+        padding: 18px;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        min-height: 68px;
+        height: auto;
+        padding: 10px 12px;
+        gap: 8px;
+    }
+
+    .logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    .navbar h3 {
+        font-size: 13px;
+        margin: 0;
+        flex: 1;
+        min-width: 0;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .signin-btn {
+        min-width: auto;
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    .signin-btn small {
+        font-size: 9px;
+    }
+
+    /* PUBLIC MESSAGE */
+
+    .message-section {
+        width: 92%;
+        margin: 25px auto 22px;
+    }
+
+    .message-box {
+        padding: 22px 18px;
+        border-radius: 14px;
+        border-left-width: 4px;
+    }
+
+    .message-title {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .message-text {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    /* BOTH CAROUSELS */
+
+    .carousel {
+        width: 92%;
+        height: 210px;
+        margin: 0 auto 22px;
+        border-radius: 12px;
+    }
+
+    /* MEMBERS */
+
+    .members-section {
+        width: 92%;
+        margin-bottom: 40px;
+    }
+
+    .members-title {
+        font-size: 24px;
+        margin-bottom: 22px;
+    }
+
+    .cards-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .member-card:hover {
+        transform: translateY(-3px);
+    }
+
+    .member-pic {
+        width: 110px;
+        height: 110px;
+        margin-top: 20px;
+    }
+
+    .member-info {
+        padding: 18px 18px 22px;
+    }
+
+    .member-info h3 {
+        font-size: 19px;
+    }
+
+    .member-info h4 {
+        font-size: 14px;
+    }
+
+    .member-info p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    /* FOOTER */
+
+    .footer {
+        margin-top: 30px;
+        padding: 28px 15px 20px;
+    }
+
+    .footer-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .footer h3 {
+        font-size: 18px;
+    }
+
+    .footer p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .footer-line {
+        width: 90%;
+        margin: 20px auto 15px;
+    }
+
+    .copyright {
+        font-size: 12px !important;
+    }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 360px) {
+
+    .navbar {
+        padding: 9px 8px;
+        gap: 7px;
+    }
+
+    .logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    .navbar h3 {
+        font-size: 11px;
+    }
+
+    .signin-btn {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    .signin-btn small {
+        font-size: 8px;
+    }
+
+    .message-section,
+    .members-section,
+    .carousel {
+        width: 94%;
+    }
+
+    .message-box {
+        padding: 18px 14px;
+    }
+
+    .message-title {
+        font-size: 22px;
+    }
+
+    .message-text {
+        font-size: 14px;
+    }
+
+    .carousel {
+        height: 175px;
+    }
+
+    .members-title {
+        font-size: 22px;
+    }
+
+    .member-info {
+        padding: 16px 14px 20px;
+    }
+
+    .footer {
+        padding: 25px 12px 18px;
+    }
+}
+
+
+/* ================= EXTRA WIDE SCREENS ================= */
+
+@media (min-width: 1400px) {
+
+    .message-section,
+    .members-section,
+    .carousel {
+        max-width: 1200px;
+    }
+}
+
+   </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+
+        <!-- LOGO -->
+
+        <img src="logo.jpeg"
+            alt="Logo" class="logo">
+
+
+        <!-- WEBSITE NAME -->
+
+        <h3 class="main-heading">
+            Sothrapara Syed Jamat
+        </h3>
+
+
+        <!-- SIGN IN -->
+
+        <a href="login.html" class="signin-btn">
+
+            Log In
+
+            <small>
+                Admin Only
+            </small>
+
+        </a>
+
+
+    </nav>
+
+
+  <p id="currentTime"></p>
+    <!-- ================= PUBLIC MESSAGE ================= -->
+
+    <section class="message-section">
+
+        <div class="message-box">
+
+            <h1 class="message-title">
+                Public Message
+            </h1>
+
+            <p class="message-text">
+               پہلے جو لوگ ملے، انہیں اچھی یادوں میں یاد رکھو؛ اور جو کل آنے والا ہے، اسے اپنے بہترین عمل سے خوبصورت بناؤ۔
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CAROUSEL ================= -->
+
+    <div class="carousel">
+
+        <div class="slides">
+
+
+            <!-- SLIDE 1 -->
+
+            <div class="slide">
+
+                <img src="1.jpeg"
+                    alt="Community Event">
+
+            </div>
+
+
+            <!-- SLIDE 2 -->
+
+            <div class="slide">
+
+                <img src="2.jpeg"
+                    alt="Community">
+
+            </div>
+
+
+            <!-- SLIDE 3 -->
+
+            <div class="slide">
+
+                <img src="3.jpeg"
+                    alt="Gathering">
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="carousel">
+
+        <div class="slides">
+
+
+            <!-- SLIDE 1 -->
+
+            <div class="slide">
+
+                <img src="4.jpeg"
+                    alt="Community Event">
+
+            </div>
+
+
+            <!-- SLIDE 2 -->
+
+            <div class="slide">
+
+                <img src="5.jpeg"
+                    alt="Community">
+
+            </div>
+
+
+            <!-- SLIDE 3 -->
+
+            <div class="slide">
+
+                <img src="6.jpeg"
+                    alt="Gathering">
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= PROFILE CARDS ================= -->
+
+    <section class="members-section">
+
+
+        <h2 class="members-title">
+            Our Members
+        </h2>
+
+
+        <div class="cards-container">
+
+
+            <!-- CARD 1 -->
+
+            <div class="member-card">
+
+                <img src="saddar.jpeg" alt="Profile" class="member-pic">
+
+                <div class="member-info">
+
+                    <h3>
+                        Syed Shakeel
+                    </h3>
+
+                    <h4>
+                        Saddar
+                    </h4>
+
+                    <p>
+                        Responsible for leading the community
+                        and managing important organizational matters.
+                    </p>
+
+                </div>
+
+            </div>
+
+<div class="member-card">
+
+                <img src="./p1.jpeg" alt="Profile" class="member-pic">
+
+                <div class="member-info">
+
+                    <h3>
+                        Syed Osman
+                    </h3>
+
+                    <h4>
+                        Leader of Young Youth
+                    </h4>
+
+                    <p>
+                        Responsible for public information,
+                        announcements and communication with members.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="member-card">
+
+                <img src="./p2.jpeg" alt="Profile" class="member-pic">
+
+                <div class="member-info">
+
+                    <h3>
+                       Syed Aqeeb Ali
+                    </h3>
+
+                    <h4>
+                       Office secatery
+                    </h4>
+
+                    <p>
+                        Responsible for public information,
+                        announcements and communication with members.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 3 -->
+
+            <div class="member-card">
+
+                <img src="p3.jpeg" alt="Profile" class="member-pic">
+
+                <div class="member-info">
+
+                    <h3>
+                       Syed Tahir
+                    </h3>
+
+                    <h4>
+                        Joint Secretary
+                    </h4>
+
+                    <p>
+                        Manages official records, meetings
+                        and important administrative responsibilities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 4 -->
+
+            <div class="member-card">
+
+                <img src="p4.jpeg" alt="Profile" class="member-pic">
+
+                <div class="member-info">
+
+                    <h3>
+                        Syed Saqid
+                    </h3>
+
+                    <h4>
+                       Minister Of Information
+                    </h4>
+
+                    <p>
+                        Responsible for financial management,
+                        accounts and community funds.
+                    </p>
+
+                </div>
+
+            </div>
+
+ <div class="member-card">
+
+                <img src="p6.jpeg" alt="Profile" class="member-pic">
+
+                <div class="member-info">
+
+                    <h3>
+                        Syed Nasir
+                    </h3>
+
+                    <h4>
+                       Finance Secatary
+                    </h4>
+
+                    <p>
+                        Participates in community activities
+                        and supports important organizational decisions.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- CARD 5 -->
+
+            <div class="member-card">
+
+                <img src="p5.jpeg" alt="Profile" class="member-pic">
+
+                <div class="member-info">
+
+                    <h3>
+                        Syed Muhammad Khurram
+                    </h3>
+
+                    <h4>
+                       Joint Finance Secatary
+                    </h4>
+
+                    <p>
+                        Supports the Saddar in organizational
+                        activities and community matters.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+ <!-- CARD 6 -->
+
+           
+            <div class="member-card">
+
+                <img src="p7.jpeg" alt="Profile" class="member-pic">
+
+                <div class="member-info">
+
+                    <h3>
+                        Syed Muhammad Javeed
+                    </h3>
+
+                    <h4>
+                        Senior Naib Saddar
+                    </h4>
+
+                    <p>
+           
+                        Participates in community activities
+                        and supports important organizational decisions.
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="member-card">
+
+                <img src="p8.jpeg" alt="Profile" class="member-pic">
+
+                <div class="member-info">
+
+                    <h3>
+                        Syed Owais
+                    </h3>
+
+                    <h4>
+                        Naib Saddar
+                    </h4>
+
+                    <p>
+                        Participates in community activities
+                        and supports important organizational decisions.
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="member-card">
+
+                <img src="p9.jpeg" alt="Profile" class="member-pic">
+
+                <div class="member-info">
+
+                    <h3>
+                        Syed Muhammad Furqan
+                    </h3>
+
+                    <h4>
+                        Chief Quarde Miniter
+                    </h4>
+
+                    <p>
+                        Participates in community activities
+                        and supports important organizational decisions.
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="member-card">
+
+                <img src="p10.jpeg" alt="Profile" class="member-pic">
+
+                <div class="member-info">
+
+                    <h3>
+                        Syed Muhammad Shahid
+                    </h3>
+
+                    <h4>
+                        General secatery
+                    </h4>
+
+                    <p>
+                        Participates in community activities
+                        and supports important organizational decisions.
+                    </p>
+
+                </div>
+
+            </div>
+            
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+
+            <img src="logo.jpeg"
+                alt="Logo" class="footer-logo">
+
+
+            <h3>
+                Sothrapara Syed Jamat
+            </h3>
+
+
+            <p>
+                Serving our community with unity,
+                respect and responsibility.
+            </p>
+
+
+            <div class="footer-line"></div>
+
+
+            <p class="copyright">
+                © 2026 Sothrapara Syed Jamat.
+                All Rights Reserved.
+            </p>
+
+
+        </div>
+
+    </footer>
+
+<script>function showTime() {
+	document.getElementById('currentTime').innerHTML = new Date().toUTCString();
+}
+showTime();
+setInterval(function () {
+	showTime();
+}, 1000);</script>
+</body>
+
+</html>
